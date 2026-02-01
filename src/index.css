@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@theme{
+    --font-heading: "Federo", sans-serif;
+    --font-paragraph: "DM Sans", sans-serif;
+    --color-primary: #FFE815;
+    --color-secondary: #0057FC;
+    --color-tertiary: #FF5B15;
+    --color-heading: #0A0E1A;
+    --color-paragraph: #57595C;
+    --color-background: #001C52;
+    /* Custom Media Query Here */
+    --breakpoint-sm: 575px;
+    --breakpoint-md: 767px;
+    --breakpoint-lg: 991px;
+    --breakpoint-xl: 1199px;
+    --breakpoint-2xl: 1399px;
+    --breakpoint-3xl: 1599px;
+    --breakpoint-4xl: 1799px;
+    --breakpoint-5xl: 4000px;
+}
+
+body{
+    @apply text-[17px] text-paragraph font-paragraph leading-7
+}
+.container{
+    @apply max-w-345 px-7.5 mx-auto
+}
+
+/* =====================================================================================
+Reuseable CSS Style Here
+===================================================================================== */
+.primary-btn{
+    @apply bg-primary text-heading text-lg px-11.25 rounded relative 
+    flex items-center justify-center overflow-hidden w-50 h-16 
+    transition-all duration-300;
+}
+
+.primary-btn::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    top: -40px;
+    bottom: -40px;
+    right: -6px;
+    background: #E5CF00;
+    transform: rotate(12deg);
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Parent hover effect */
+.pricing-item:hover .primary-btn{
+    @apply bg-secondary text-white;
+}
+
+.pricing-item:hover .primary-btn::before{
+    background: #71A2FF;
+    right: -40px;
+}
+
+/* .primary-btn{
+    @apply bg-primary text-heading text-lg px-11.25 rounded relative flex items-center justify-center overflow-hidden w-50 h-16 before:absolute before:w-6 before:bg-[#E5CF00] before:-right-1 before:top-0 before:-bottom-10 before:rotate-12 hover:before:-right-10 transition-all duration-300
+} */
+.primary-btn .front-text{
+    @apply absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:-translate-y-full
+}
+.primary-btn .back-text{
+    @apply absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0
+}
+.about-btn .primary-btn{
+    @apply bg-secondary text-white text-lg px-11.25 rounded relative flex items-center justify-center overflow-hidden w-50 h-16 before:absolute before:w-6 before:bg-[#71A2FF] before:-right-1 before:top-0 before:-bottom-10 before:rotate-12 hover:before:-right-10 transition-all duration-300
+}
+/* Section Title CSS Here */
+.sec-title-one{
+    @apply mb-12.5
+}
+.sec-title-one h2{
+    @apply text-3xl sm:text-6xl sm:leading-20 font-bold font-heading text-heading
+}
+/* =====================================================================================
+Header CSS Style Here
+===================================================================================== */
+.main-menu ul li{
+    @apply relative z-40
+}
+.main-menu ul li a{
+    @apply text-lg font-heading font-normal leading-7 py-9 inline-block hover:text-primary transition-all duration-300 ease-in-out
+}
+.main-menu ul li a .header-arrow{
+    @apply text-xl absolute left-[50%] -top-5 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:top-1 group-hover:transition-all duration-300 ease-in-out
+}
+.main-menu ul li .dropdown-menu{
+    @apply absolute translate-y-6 bg-white shadow w-52 py-2 invisible opacity-0
+}
+.main-menu ul li:hover .dropdown-menu{
+    @apply visible opacity-100 translate-y-0 transition-all duration-300
+}
+.main-menu ul li .dropdown-menu a{
+    @apply text-heading block py-1 px-3 hover:text-secondary
+}
+/* Parent Div text color will be primary Color */
+.main-menu ul li.group:hover > a {
+    @apply text-primary
+}
+/* Mobile Menu Style Here */
+.mobile-menu ul li{
+    @apply border-b pb-3 border-b-[rgba(0,0,0,0.3)] relative flex items-center justify-between
+}
+.mobile-menu-icon{
+    @apply  border border-[rgba(0,0,0,0.3)] w-6 h-6 hover:text-white hover:bg-secondary hover:border-secondary cursor-pointer
+}
+/* =====================================================================================
+Banner CSS Style Here
+===================================================================================== */
+.heading-text{
+/* identical to box height, or 109% */
+text-transform: uppercase;
+background: radial-gradient(42.24% 2817.5% at 52.45% 54.17%, rgba(255, 232, 21, 0.95) 0%, #3C7FFF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.banner-text{
+    @apply text-3xl leading-12 sm:text-5xl sm:leading-17 lg:text-7xl lg:leading-25 xl:text-[110px] text-white font-heading xl:leading-35 uppercase font-bold
+}
+.banner-subtext{
+    @apply text-lg sm:text-xl leading-8 md:text-3xl text-[#B1B4BA] font-heading md:leading-10 uppercase mb-3
+}
+/* =====================================================================================
+Service Section  CSS Style Here
+===================================================================================== */
+.service-point{
+    @apply pl-6 relative before:absolute before:left-0 before:right-0 before:top-2 before:bottom-0 before:w-3 before:h-3 before:bg-paragraph before:rounded-full
+}
+/* =====================================================================================
+Single Blog Section CSS Style Here
+===================================================================================== */
+.blog-heading{
+    @apply text-2xl text-heading font-heading leading-8.5 relative before:absolute before:w-3 before:h-3 before:bg-secondary before:rounded-full before:left-0 before:top-3 pl-5
+}
+
+
+/* =====================================================================================
+Header CSS Style Here
+===================================================================================== */
+/* =====================================================================================
+Header CSS Style Here
+===================================================================================== */
+/* =====================================================================================
+Header CSS Style Here
+===================================================================================== */
+/* =====================================================================================
+Header CSS Style Here
+===================================================================================== */
