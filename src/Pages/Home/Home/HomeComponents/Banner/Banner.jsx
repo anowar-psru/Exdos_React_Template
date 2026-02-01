@@ -10,7 +10,7 @@ import PrimaryBtn from '../../../../../Components/SharedComponents/CustomBtn'
 const Banner = () => {
     return (
         <>
-            <section className='py-20 md:py-45 bg-cover inset-0 bg-center z-0 relative' style={{backgroundImage: `url(${banner_bg})`}}>
+            <section className='pt-40 pb-20 md:py-45 bg-cover inset-0 bg-center z-0 relative' style={{backgroundImage: `url(${banner_bg})`}}>
                 {/* Left Border Line */}
                 <div className="absolute top-0 left-25 w-px h-full bg-[rgba(255,255,255,0.15)] z-20 hidden xl:block"></div>
                 <div className="container">
